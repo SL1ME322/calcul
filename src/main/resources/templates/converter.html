@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер валют</title>
+</head>
+<body>
+
+<form method="post" action="/converter">
+
+    <select name = "sourceCurrency">
+        <option value="USD" id="USDfrom">USD</option>
+        <option value="EUR" id="EURfrom">EUR</option>
+        <option value="RUB" id="RUBfrom">RUB</option>
+
+    </select>
+    <input type="text" id="amount" name = "amount" required>
+    <select name="targetCurrency">
+        <option value="USD" id="USDinto">USD</option>
+        <option value="EUR"  id="EURDinto">EUR</option>
+        <option value="RUB"  id="RUBinto"> RUB</option>
+
+    </select>
+    <input type="submit" value="Конвертировать">
+</form>
+<h2 th:if="${result}" th:text="${result}"></h2>
+
+</body>
+</html>
