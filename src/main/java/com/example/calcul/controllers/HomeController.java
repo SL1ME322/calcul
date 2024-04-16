@@ -15,17 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping("/home")
     String getHome(Model model) {
-        model.addAttribute("name", "QWQW");
         return "home";
-
     }
-
     @GetMapping("/converter")
     String getConverter(Model model) {
         return
                 "converter";
     }
-
     @GetMapping("/calculator")
     String getCalculator(Model model) {
         return

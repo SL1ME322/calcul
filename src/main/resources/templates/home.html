@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form method="get" action="/converter">
-    <input type="submit" value="Валютный конвертер">
-</form>
-<form method="get" action="/calculator">
-    <input type="submit" value="Калькулятор">
-</form>
+<div class="container mt-5">
+    <form method="get" action="/converter" class="mb-3">
+        <button type="submit" class="btn btn-primary">Валютный конвертер</button>
+    </form>
+    <form method="get" action="/calculator">
+        <button type="submit" class="btn btn-secondary">Калькулятор</button>
+    </form>
+</div>
 
 
 
