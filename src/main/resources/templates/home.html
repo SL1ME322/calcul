@@ -2,18 +2,78 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Currency Converter and Calculator">
+    <meta name="keywords" content="currency, converter, calculator">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Additional CSS styles can be added here */
+    </style>
 </head>
 <body>
-<form method="get" action="/converter">
-    <input type="submit" value="Валютный конвертер">
-</form>
-<form method="get" action="/calculator">
-    <input type="submit" value="Калькулятор">
-</form>
+<header>
+    <h1>Welcome to our Currency Converter and Calculator!</h1>
+    <nav>
+        <ul>
+            <li><a href="#converter">Currency Converter</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <!-- Add more navigation links if needed -->
+        </ul>
+    </nav>
+</header>
 
+<main>
+    <section id="converter">
+        <h2>Currency Converter</h2>
+        <form method="get" action="/converter">
+            <!-- Add currency conversion inputs here -->
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency" name="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <!-- Add more currency options if needed -->
+            </select>
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency" name="toCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <!-- Add more currency options if needed -->
+            </select>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount">
+            <button type="submit">Convert</button>
+        </form>
+    </section>
 
+    <section id="calculator">
+        <h2>Calculator</h2>
+        <form method="get" action="/calculator">
+            <!-- Add calculator inputs here -->
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1" name="num1">
+            <label for="operator">Operator:</label>
+            <select id="operator" name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2" name="num2">
+            <button type="submit">Calculate</button>
+        </form>
+    </section>
+</main>
 
+<footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
+<script>
+    // Additional JavaScript code can be added here
+</script>
 </body>
-
 </html>
